@@ -1,0 +1,122 @@
+/* Regular Styles */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", sans-serif;
+  padding: 2%;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+    color: black;
+  text-align: center;
+  font-size: 1em;
+  padding: .5em 0;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #dadada;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+/* Bar Delays Animation Function */
+/* Chart Styles */
+.chart-wrap {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.chart-wrap .row {
+  position: relative;
+  height: 40px;
+  margin-bottom: .25em;
+}
+.chart-wrap .bar-wrap {
+  position: relative;
+  background: #333;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.chart-wrap .bar-wrap .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #2661c3;
+  transition: all 1s;
+  transform: translateX(-100%);
+}
+.chart-wrap .bar-wrap .bar.in {
+  transform: translateX(0%);
+}
+.chart-wrap .row:nth-of-type(1) .bar {
+  transition: 1s 400ms;
+}
+.chart-wrap .row:nth-of-type(2) .bar {
+  transition: 1s 600ms;
+}
+.chart-wrap .row:nth-of-type(3) .bar {
+  transition: 1s 800ms;
+}
+.chart-wrap .row:nth-of-type(4) .bar {
+  transition: 1s 1000ms;
+}
+.chart-wrap .row:nth-of-type(5) .bar {
+  transition: 1s 1200ms;
+}
+.chart-wrap .row:nth-of-type(6) .bar {
+  transition: 1s 1400ms;
+}
+.chart-wrap .row:nth-of-type(7) .bar {
+  transition: 1s 1600ms;
+}
+.chart-wrap .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+              font-weight: bold;
+
+    padding-top: .5em;
+  z-index: 10;
+}
+.chart-wrap .number {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  width: 20px;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: right;
+    padding-top: .3em;
+          font-weight: bold;
+
+  z-index: 10;
+    
+}
+@media screen and (min-width: 800px) {
+  .chart-wrap .row {
+  }
+  .chart-wrap .label {
+    text-align: left;
+    padding-left: 1em;
+  }
+  .chart-wrap .number {
+    text-align: right;
+    padding-right: 2.2em;
+  }
+}

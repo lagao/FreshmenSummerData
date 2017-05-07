@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Reason', 'Percentage'],
+                    ['Own Startup',      1],
+
+
+                    ['High School Job',      5],
+                     ['Cold Emailed',  9],
+
+
+                  ['Applied Directly',      16],
+
+                    ['Family or Friend Connection',     16],
+
+        ]);
+
+        var options = {
+          title: 'Methods of Getting Summer Plans',
+          colors: ['#000080','#333','#707070', '#2661c3',  '#6d9ded', ],
+          pieHole: 0.6,
+          };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

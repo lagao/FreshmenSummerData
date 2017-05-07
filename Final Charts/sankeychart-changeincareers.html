@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['sankey']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'From');
+        data.addColumn('string', 'To');
+        data.addColumn('number', 'Weight');
+        data.addRows([
+          [ 'Non-Profit or HS Job', 'Consulting', 3 ],
+          [ 'Non-Profit or HS Job', 'Finance', 1 ],
+          [ 'Non-Profit or HS Job', 'Marketing', 1 ],
+          [ 'Travel/Study Abroad', 'Consulting', 2 ],
+          [ 'Travel/Study Abroad', 'Finance', 4 ],
+          [ 'Travel/Study Abroad', 'Media, Arts, and Design', 1 ],
+          [ 'Travel/Study Abroad', 'Marketing', 1 ],
+          [ 'Travel/Study Abroad', 'Tech & Entrepreneurship', 6 ],
+          [ 'Research or Classes', 'Consulting', 2 ],
+          [ 'Research or Classes', 'Finance', 2 ],
+          [ 'Research or Classes', 'Medicine', 1 ],
+          [ 'Research or Classes', 'Tech & Entrepreneurship', 5 ],
+          [ 'Financial Services', 'Consulting', 2 ],
+          [ 'Financial Services', 'Finance', 10 ],
+          [ 'Financial Services', 'Research & Academia', 1 ],
+          [ 'Financial Services', 'Tech & Entrepreneurship', 2 ],
+          [ 'Financial Services', 'Undecided', 4 ],
+          [ 'Marketing & Analytics', 'Finance', 2 ],
+          [ 'Marketing & Analytics', 'Media, Arts, and Design', 2 ],
+          [ 'Marketing & Analytics', 'Marketing', 2 ],
+          [ 'Marketing & Analytics', 'Tech & Entrepreneurship', 2 ],
+          [ 'Tech or Startups', 'Consulting', 1 ],
+          [ 'Tech or Startups', 'Medicine', 2 ],
+          [ 'Tech or Startups', 'Tech & Entrepreneurship', 6 ],
+          [ 'Tech or Startups', 'Media, Arts, and Design', 1 ],
+        ]);
+
+        // Sets chart options.
+        var options = {
+          width: 450,
+        
+        };
+
+        // Instantiates and draws our chart, passing in some options.
+        var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="sankey_basic" style="width: 900px; height: 700px;"></div>
+  </body>
+</html>
