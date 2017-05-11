@@ -20,6 +20,8 @@ body {
   background: white;
 }
 
+
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -263,7 +265,6 @@ ul {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
-  background: #6d9ded;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
