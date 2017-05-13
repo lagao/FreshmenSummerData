@@ -11,9 +11,7 @@ body,
 html {
   display: flex;
   height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+justify-content: center;
 }
 
 h1 {
@@ -33,7 +31,16 @@ h3 {
   font-size: 16px;
 }
 
+#Types {
+    align-items: left;
+        padding-right: 70px;
+}
 
+#Methods {
+    align-items: right;
+        padding-left: 70px;
+
+}
 /*--------------------
 Progress
 ---------------------*/
